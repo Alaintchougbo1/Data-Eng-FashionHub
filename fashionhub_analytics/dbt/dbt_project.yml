@@ -1,0 +1,17 @@
+name: 'fashionhub_analytics'
+version: '1.0.0'
+config-version: 2
+
+profile: 'fashionhub'  # define in ~/.dbt/profiles.yml
+
+model-paths: ['models']
+analysis-paths: ['analyses']
+test-paths: ['tests']
+target-path: 'target'
+
+models:
+  fashionhub_analytics:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
