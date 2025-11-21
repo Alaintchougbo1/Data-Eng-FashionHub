@@ -12,15 +12,16 @@ skeletons for data generation, ingestion, transformation, security, and orchestr
 ```
 fashionhub_analytics/
 ├─ data_generation/
-│  ├─ sql_generators/         # Snowflake SQL to synthesize structured/semi-structured data
-│  ├─ python_generators/      # Python scripts to emit JSON/CSV/Parquet fixtures
-│  └─ setup_all_data.sql      # Master script to orchestrate generators
+│  ├─ sql_generators/         
+semi-structured data
+│  ├─ python_generators/      
+│  └─ setup_all_data.sql      
 ├─ snowflake/
-│  ├─ warehouses.sql          # Multi-cluster WH + auto-suspend/resume
-│  ├─ stages_and_pipes.sql    # Internal/external stages + Snowpipe
-│  ├─ security.sql            # RBAC, masking, row access policies, tags
-│  └─ sharing.sql             # Secure data sharing script
-├─ dbt/                       # dbt project
+│  ├─ warehouses.sql          
+│  ├─ stages_and_pipes.sql    
+│  ├─ security.sql           
+│  └─ sharing.sql             
+├─ dbt/               
 │  ├─ dbt_project.yml
 │  ├─ models/
 │  │  ├─ staging/
@@ -32,7 +33,7 @@ fashionhub_analytics/
 │  ├─ repository.py
 │  └─ jobs.py
 ├─ docs/
-│  ├─ checklist.md            
+│  ├─ checklist.md         
 │  └─ query_profile_notes.md  
 └─ Makefile                   
 ```
